@@ -1,6 +1,9 @@
 const app = Vue.createApp({
   data() {
-    return {};
+    return {
+      playerHealth: 100,
+      monsterHealth: 100,
+    };
   },
 });
 
