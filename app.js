@@ -5,6 +5,11 @@ const app = Vue.createApp({
       monsterHealth: 100,
     };
   },
+  methods: {
+    attackMonster() {
+      const attackValue = Math.floor(Math.random() * (12 - 5)) + 5;
+    },
+  },
 });
 
 app.mount("#game");
