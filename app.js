@@ -46,6 +46,7 @@ const app = Vue.createApp({
       } else {
         this.playerHealth += healValue;
       }
+      this.attackMonster();
     },
   },
 });
