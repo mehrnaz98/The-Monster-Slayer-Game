@@ -1,5 +1,7 @@
 const app = Vue.createApp({
-  data() {},
+  data() {
+    return {};
+  },
 });
 
 app.mount("#game");
