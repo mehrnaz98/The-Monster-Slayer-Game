@@ -8,6 +8,7 @@ const app = Vue.createApp({
       playerHealth: 100,
       monsterHealth: 100,
       currentRound: 0,
+      winner: null,
     };
   },
   computed: {
