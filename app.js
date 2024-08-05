@@ -13,18 +13,6 @@ const app = Vue.createApp({
   },
   computed: {
     monsterBarStyles() {
-      return { width: this.monsterHealth + "%" };
-    },
-    playerBarStyles() {
-      return { width: this.playerHealth + "%" };
-    },
-    mayUseSpecialAttack() {
-      return this.currentRound % 3 !== 0;
-    },
-  },
-
-  watch: {
-    monsterBarStyles() {
       if (this.monsterHealth < 0) {
         return { width: "0%" };
       }
@@ -36,6 +24,12 @@ const app = Vue.createApp({
       }
       return { width: this.playerHealth + "%" };
     },
+    mayUseSpecialAttack() {
+      return this.currentRound % 3 !== 0;
+    },
+  },
+
+  watch: {
     playerHealth(value) {
       if (value <= 0 && this.monsterHealth <= 0) {
         // A Draw
