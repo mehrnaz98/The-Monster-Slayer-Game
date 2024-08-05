@@ -29,7 +29,9 @@
           <div class="healthbar__value" :style="playerBarStyles"></div>
         </div>
       </section>
-      <section class="container"></section>
+      <section class="container">
+        <h2>Game Over!</h2>
+      </section>
       <section id="controls">
         <button @click="attackMonster">ATTACK</button>
         <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
