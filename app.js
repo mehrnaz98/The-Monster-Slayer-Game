@@ -86,6 +86,7 @@ const app = Vue.createApp({
     surrender() {
       this.winner = "monster";
     },
+    addLogMessage(who, what, value) {},
   },
 });
 
