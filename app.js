@@ -88,7 +88,13 @@ const app = Vue.createApp({
     surrender() {
       this.winner = "monster";
     },
-    addLogMessage(who, what, value) {},
+    addLogMessage(who, what, value) {
+      this.logMessages.unshift({
+        actionBy: who,
+        actionType: what,
+        actionValue: value,
+      });
+    },
   },
 });
 
