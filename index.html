@@ -48,8 +48,13 @@
         <h2>Battle Log</h2>
         <ul>
           <li v-for="logMessage in logMessages">
-            {{logMessage.actionBy}} - {{logMessage.actionType}} -
-            {{logMessage.actionValue}}
+            <span
+              >{{ logMessage.actionBy === 'player' ? 'Player' :
+              'Monster'}}</span
+            >
+            <span v-if="logMessage.actionType === 'heal'">
+              heals himself for <span>{{logMessage.actionValue}}</span>
+            </span>
           </li>
         </ul>
       </section>
