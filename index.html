@@ -53,7 +53,12 @@
               'Monster'}}</span
             >
             <span v-if="logMessage.actionType === 'heal'">
-              heals himself for <span>{{logMessage.actionValue}}</span>
+              heals himself for
+              <span class="log--heal">{{logMessage.actionValue}}</span>
+            </span>
+            <span v-else>
+              attacks and deals
+              <span class="log--damage">{{logMessage.actionValue}}</span>
             </span>
           </li>
         </ul>
